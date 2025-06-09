@@ -2,6 +2,7 @@ class Film:
     def __init__(self, name, date):
         self.name = name
         self.date = date
+        self.location = None
 
     def __str__(self):
         return self.name
@@ -17,7 +18,6 @@ class FilmVHF(Film):
 
 class FilmDVD(Film):
     type = "dvd"
-
     def __init__(self, name, date):
         super().__init__(name, date)
         self.mega_octets = 4700

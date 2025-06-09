@@ -1,4 +1,4 @@
-from P3_films.films.film import FilmDVD, FilmVHF
+from .film import FilmDVD, FilmVHF
 
 class FilmCleaner:
     def __init__(self, film):
@@ -12,7 +12,7 @@ class FilmCleaner:
         for Film in (FilmVHF, FilmDVD):
             if type == Film.type:
                 return Film(name, date)
-            return None
+        return None
 
     def generate_name(self):
         name_date = self.film[0]
